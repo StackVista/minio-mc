@@ -26,7 +26,7 @@ import (
 	"github.com/minio/mc/pkg/probe"
 	"github.com/minio/minio/pkg/console"
 
-	jwtgo "github.com/dgrijalva/jwt-go"
+	jwt "github.com/golang-jwt/jwt/v4"
 	json "github.com/minio/mc/pkg/colorjson"
 	yaml "gopkg.in/yaml.v2"
 )
@@ -170,13 +170,13 @@ func generatePrometheusConfig(ctx *cli.Context) error {
 		return err
 	}
 
-	jwt := jwtgo.NewWithClaims(jwtgo.SigningMethodHS512, jwtgo.StandardClaims{
-		ExpiresAt: UTCNow().Add(defaultPrometheusJWTExpiry).Unix(),
+	tokenObj := jwt.NewWithClaims(jwt.SigningMethodHS512, jwt.RegisteredClaims{
+		ExpiresAt: jwt.NewNumericDate(UTCNow().Add(defaultPrometheusJWTExpiry)),
 		Subject:   hostConfig.AccessKey,
 		Issuer:    "prometheus",
 	})
 
-	token, err := jwt.SignedString([]byte(hostConfig.SecretKey))
+	token, err := tokenObj.SignedString([]byte(hostConfig.SecretKey))
 	if err != nil {
 		return err
 	}
