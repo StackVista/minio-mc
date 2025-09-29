@@ -36,15 +36,16 @@ require (
 	gopkg.in/yaml.v2 v2.4.0
 )
 
-require github.com/coreos/go-systemd/v22 v22.5.0 // indirect
+replace github.com/minio/minio => github.com/StackVista/minio v0.0.0-20250926143414-8a1db3479671
 
-replace github.com/minio/minio => github.com/StackVista/minio v0.0.0-20250925125858-4f8135f30634
+replace google.golang.org/grpc => google.golang.org/grpc v1.58.3
 
 require (
 	github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d // indirect
 	github.com/beorn7/perks v1.0.1 // indirect
 	github.com/cespare/xxhash/v2 v2.3.0 // indirect
 	github.com/coreos/go-semver v0.3.1 // indirect
+	github.com/coreos/go-systemd/v22 v22.5.0 // indirect
 	github.com/fatih/structs v1.1.0 // indirect
 	github.com/go-ole/go-ole v1.3.0 // indirect
 	github.com/gogo/protobuf v1.3.2 // indirect
