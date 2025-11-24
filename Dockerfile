@@ -1,4 +1,4 @@
-FROM golang:1.24.6-alpine as builder
+FROM golang:1.24.9-alpine as builder
 
 LABEL maintainer="MinIO Inc <dev@min.io>"
 
