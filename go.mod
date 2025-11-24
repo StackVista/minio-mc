@@ -2,7 +2,7 @@ module github.com/minio/mc
 
 go 1.24.0
 
-toolchain go1.24.6
+toolchain go1.24.9
 
 require (
 	github.com/cheggaaa/pb v1.0.29
@@ -28,9 +28,9 @@ require (
 	github.com/rs/xid v1.4.0
 	github.com/shirou/gopsutil/v3 v3.21.3
 	github.com/tidwall/gjson v1.14.2
-	golang.org/x/crypto v0.41.0
-	golang.org/x/net v0.43.0
-	golang.org/x/text v0.28.0
+	golang.org/x/crypto v0.45.0
+	golang.org/x/net v0.47.0
+	golang.org/x/text v0.31.0
 	gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
 	gopkg.in/h2non/filetype.v1 v1.0.5
 	gopkg.in/yaml.v2 v2.4.0
@@ -83,8 +83,8 @@ require (
 	go.etcd.io/etcd/client/v3 v3.6.4 // indirect
 	go.uber.org/multierr v1.11.0 // indirect
 	go.uber.org/zap v1.27.0 // indirect
-	golang.org/x/sys v0.36.0 // indirect
-	golang.org/x/term v0.34.0 // indirect
+	golang.org/x/sys v0.38.0 // indirect
+	golang.org/x/term v0.37.0 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20250707201910-8d1bb00bc6a7 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20250818200422-3122310a409c // indirect
 	google.golang.org/grpc v1.75.0 // indirect
